@@ -98,7 +98,7 @@ def start_simulation():
 
     global launch_process
 
-    print('Starting Omokai simulation...')
+    print('Starting ground robot simulation...')
     print()
 
     launch_process = subprocess.Popen([
@@ -147,7 +147,7 @@ def stop_simulation():
 
     if launch_process is not None:
         print()
-        print('Stopping Omokai simulation...')
+        print('Stopping ground robot simulation...')
 
         try:
             launch_process.send_signal(signal.SIGINT)

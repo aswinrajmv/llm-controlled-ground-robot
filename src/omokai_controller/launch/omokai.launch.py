@@ -6,7 +6,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
 
-        # Gazebo simulation
+        # Start Gazebo simulation
         ExecuteProcess(
             cmd=[
                 'bash',

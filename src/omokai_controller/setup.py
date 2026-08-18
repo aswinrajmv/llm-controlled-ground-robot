@@ -52,7 +52,7 @@ setup(
     zip_safe=True,
     maintainer='aswin',
     maintainer_email='aswin@todo.todo',
-    description='Omokai robot controller',
+    description='LLM-controlled ground robot controller',
     license='TODO',
     entry_points={
         'console_scripts': [

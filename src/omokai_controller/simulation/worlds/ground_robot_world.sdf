@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.9">
 
-  <world name="omokai_world">
+  <world name="ground_robot_world">
 
     <!-- Physics -->
     <physics name="default_physics" type="ode">
@@ -57,7 +57,7 @@
 
     </light>
 
-    <!-- OMOKAI robot -->
+    <!-- LLM-controlled ground robot -->
     <include>
       <uri>model://vehicle_blue</uri>
       <name>vehicle_blue</name>

@@ -150,10 +150,11 @@ def stop_simulation():
         print('Stopping ground robot simulation...')
 
         try:
-            launch_process.send_signal(signal.SIGINT)
+            launch_process.terminate()
             launch_process.wait(timeout=10)
         except subprocess.TimeoutExpired:
-            launch_process.terminate()
+            launch_process.kill()
+            launch_process.wait(timeout=5)
 
         launch_process = None
 

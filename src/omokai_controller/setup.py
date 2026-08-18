@@ -2,11 +2,13 @@ from glob import glob
 
 from setuptools import find_packages, setup
 
+
 package_name = 'omokai_controller'
+
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='1.0.0',
     packages=find_packages(),
     data_files=[
         (
@@ -41,19 +43,15 @@ setup(
             glob('test/*.py')
         ),
     ],
-
     install_requires=[
         'setuptools',
         'requests',
     ],
-    tests_require=[
-        'pytest',
-    ],
     zip_safe=True,
-    maintainer='aswin',
-    maintainer_email='aswin@todo.todo',
+    maintainer='Aswin',
+    maintainer_email='aswinrajmv777@gmail.com',
     description='LLM-controlled ground robot controller',
-    license='TODO',
+    license='MIT',
     entry_points={
         'console_scripts': [
             'square_controller = omokai_controller.square_controller:main',

@@ -1,11 +1,14 @@
 import json
+import os
 
-from mission_validator import validate_mission
+from ament_index_python.packages import get_package_share_directory
+
+from .mission_validator import validate_mission
 
 
 def load_mission(filename):
-
-    with open(filename, 'r') as file:
+    """Load and validate a mission JSON file."""
+    with open(filename, 'r', encoding='utf-8') as file:
         mission = json.load(file)
 
     valid, message = validate_mission(mission)
@@ -17,10 +20,15 @@ def load_mission(filename):
 
 
 def main():
+    """Load the default inspection mission and display it."""
+    package_share = get_package_share_directory(
+        'omokai_controller'
+    )
 
-    filename = (
-        '/home/aswin/omokai_ws/src/'
-        'omokai_controller/missions/inspection_loop.json'
+    filename = os.path.join(
+        package_share,
+        'missions',
+        'inspection_loop.json'
     )
 
     mission = load_mission(filename)

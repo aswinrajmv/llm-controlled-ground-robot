@@ -397,18 +397,23 @@ def main(args=None):
     node = WaypointController()
 
     try:
-        rclpy.spin(node)
+        while rclpy.ok() and not node.mission_completed:
+            rclpy.spin_once(
+                node,
+                timeout_sec=0.1
+            )
 
     except KeyboardInterrupt:
         pass
 
     finally:
-
-        node.cmd_pub.publish(Twist())
+        if rclpy.ok():
+            node.cmd_pub.publish(Twist())
 
         node.destroy_node()
 
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':

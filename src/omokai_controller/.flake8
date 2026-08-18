@@ -1,0 +1,8 @@
+[flake8]
+exclude =
+    archive,
+    build,
+    install,
+    log,
+    .git,
+    __pycache__

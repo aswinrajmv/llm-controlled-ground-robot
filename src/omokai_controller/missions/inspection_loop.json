@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "mission": "inspection_loop",
+  "repeat": 3,
+  "waypoints": [
+    {"x": 2.0, "y": 0.0},
+    {"x": 2.0, "y": 2.0},
+    {"x": 0.0, "y": 2.0},
+    {"x": 0.0, "y": 0.0}
+  ]
+}

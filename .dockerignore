@@ -1,0 +1,10 @@
+.git
+.gitignore
+build
+install
+log
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.egg-info

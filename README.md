@@ -117,3 +117,25 @@ Original project code is released under the MIT License. Third-party software an
 ## Project Name
 
 The project is presented externally as LLM-Controlled Ground Robot. The internal ROS 2 package remains `omokai_controller` for compatibility with the implemented package and launch interfaces.
+
+## Docker
+
+Docker support is provided as an additional reproducible deployment path.
+
+The container includes:
+
+- ROS 2 Lyrical
+- Gazebo Sim 10.4.0
+- `ros_gz_bridge`
+- `ros_gz_sim`
+- Python runtime and project dependencies
+- The complete ground-robot project
+
+Ollama and the `qwen2.5:3b` model remain on the host and are accessed by the container through the host network.
+
+### Prerequisites
+
+Install Docker Engine and Docker Compose, and ensure Ollama is running with the required model:
+
+```bash
+ollama list
